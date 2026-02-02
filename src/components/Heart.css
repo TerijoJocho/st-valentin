@@ -1,0 +1,9 @@
+.heart {
+    border: 1px solid pink;
+    color: red;
+    border-radius: 8px;
+}
+
+.heart.disabled {
+    color: bisque;
+}
