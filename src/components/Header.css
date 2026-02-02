@@ -1,0 +1,23 @@
+header {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
+
+.calendar-icon {
+    font-size: 1.5rem;
+}
+
+.date-container > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
