@@ -58,3 +58,21 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 768px) {
+    .heart-item {
+        font-size: 72px;
+    }
+    .heart-message {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart-item {
+        font-size: 56px;
+    }
+    .heart-message {
+        font-size: 0.9rem;
+    }
+}

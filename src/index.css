@@ -1,23 +1,30 @@
-:root {
-  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+html {
+  font-size: 100%;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  /* background-image: url(../public/background-body.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+  font-family: "Love Ya Like A Sister", cursive;
+  line-height: 1.5;
+}
+
+/* tablette */
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+/* téléphone */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
 }
