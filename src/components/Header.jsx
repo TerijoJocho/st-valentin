@@ -17,7 +17,7 @@ export default function Header() {
 
     return (
         <header>
-            <h1 className="header-title">Mon Cadeau De St-Valentin Pour Toi</h1>
+            <h1 className="header-title">À toi mon amour</h1>
             <div className="date-container">
                 <FontAwesomeIcon 
                     icon={faCalendarDays}
