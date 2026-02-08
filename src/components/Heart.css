@@ -18,6 +18,32 @@
     animation-play-state: paused;
     filter: none;
     opacity: 0.8;
+    /* pointer-events: none; */
+}
+
+.heart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.heart-wrapper:hover .tooltip {
+    opacity: 1;
 }
 
 .heart-message {
@@ -60,19 +86,25 @@
 }
 
 @media (max-width: 768px) {
-    .heart-item {
+    .heart-item, .heart-wrapper {
         font-size: 72px;
     }
     .heart-message {
         font-size: 0.95rem;
     }
+    .tooltip {
+        font-size: 0.65rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .heart-item {
+    .heart-item, .heart-wrapper {
         font-size: 56px;
     }
     .heart-message {
         font-size: 0.9rem;
+    }
+    .tooltip {
+        font-size: 0.55rem;
     }
 }

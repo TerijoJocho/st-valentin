@@ -68,7 +68,8 @@ export default function Heart() {
 
     //set le coeur qui peut etre ouvert dans localStorage
     function handleClick(obj) {
-        if (obj.date > today) return;
+        if (obj.date > today)
+            return;
 
         const key = `heart-${obj.id}-${today}`;
         localStorage.setItem(key, "opened");
@@ -77,6 +78,18 @@ export default function Heart() {
             ...prev,
             [obj.id]: true
         }));
+    }
+
+    //affiche la date dans un format fr
+    function formatDate(strDate) {
+        const date = new Date(strDate);
+        return (
+            new Intl.DateTimeFormat('fr-FR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            }).format(date)
+        );
     }
 
     //render
@@ -89,12 +102,18 @@ export default function Heart() {
                 return (
                     <section key={obj.id} className="heart-block">
                         {!isOpen && (
-                            <FontAwesomeIcon
-                                icon={faHeart}
-                                className={`heart-item ${isActive ? "active" : "disabled"}`}
-                                onClick={() => handleClick(obj)}
-                                style={{ animationDelay: `${obj.id * 0.4}s` }}
-                            />
+                            <div className='heart-wrapper'>
+                                <FontAwesomeIcon
+                                    icon={faHeart}
+                                    className={`heart-item ${isActive ? "active" : "disabled"}`}
+                                    onClick={() => handleClick(obj)}
+                                />
+                                {!isActive &&  (
+                                    <span className='tooltip'>
+                                        Disponible le {formatDate(obj.date)} ♥️
+                                    </span>
+                                )}
+                            </div>
                         )}
 
                         {isOpen && (
