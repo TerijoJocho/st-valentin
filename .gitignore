@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 #Données local
-data.js
+src/data.js
