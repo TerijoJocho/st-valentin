@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
         id: 0,
         icon: "heart",
@@ -96,3 +96,5 @@ export const data = [
         date: "2026-02-28"
     }
 ];
+
+export default data;

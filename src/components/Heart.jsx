@@ -1,4 +1,4 @@
-import {data} from '../data';
+import data from '../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
