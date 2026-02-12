@@ -94,6 +94,7 @@
     }
     .tooltip {
         font-size: 0.65rem;
+        top: 80%;
     }
     .heart-wrapper .tooltip {
         opacity: 1;
@@ -109,6 +110,7 @@
     }
     .tooltip {
         font-size: 0.55rem;
+        top: 80%;
     }
     .heart-wrapper .tooltip {
         opacity: 1;

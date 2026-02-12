@@ -110,7 +110,7 @@ export default function Heart() {
                                 />
                                 {!isActive &&  (
                                     <span className='tooltip'>
-                                        Disponible le {formatDate(obj.date)} ♥️
+                                        {formatDate(obj.date)} ♥️
                                     </span>
                                 )}
                             </div>
